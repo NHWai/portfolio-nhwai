@@ -1,0 +1,78 @@
+.end1,
+.middle1,
+.middle2 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+}
+
+.end1,
+.end2 {
+  color: rgba(77, 196, 156, 0.9);
+}
+
+.end2 {
+  position: absolute;
+}
+
+.middle2 {
+  color: #cfcfcf;
+}
+
+.middle1 {
+  animation: ani1 10s 1;
+  animation-delay: -3s;
+  max-width: 500px;
+  color: black;
+  transform: color 0.4s linear;
+}
+
+.middle2 {
+  animation: ani2 10s 1;
+  animation-delay: -3s;
+  max-width: 0;
+}
+
+@keyframes ani1 {
+  0% {
+    max-width: 500px;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  90% {
+    max-width: 500px;
+  }
+
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    max-width: 0;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  50% {
+    max-width: 500px;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  100% {
+    max-width: 0;
+  }
+}
