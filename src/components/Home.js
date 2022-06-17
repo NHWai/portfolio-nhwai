@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Profilesvg from "./Profilesvg";
 import SocialBar from "./SocialBar";
 import Logo from "./Logo";
-import { motion } from "framer-motion/dist/framer-motion";
+import { motion } from "framer-motion";
 import Description from "./Description";
 
 function Home() {

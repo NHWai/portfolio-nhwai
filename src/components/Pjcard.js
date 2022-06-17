@@ -1,10 +1,9 @@
 import React from "react";
 import "../css/projects.css";
-import tailwind from "../assests/landing-page-tailwind.png";
-import Tailwind from "../assests/tailwindcss-icon.svg";
-import VanillaJs from "../assests/javascript-horizontal.svg";
+import Tailwind from "../assests/tailwindcss-icon-white.svg";
+import VanillaJs from "../assests/javascript-horizontal-white.svg";
 import BootStrap from "../assests/getbootstrap-icon.svg";
-import ReAct from "../assests/reactjs-icon.svg";
+import ReAct from "../assests/reactjs-icon-white.svg";
 
 function Pjcard({ name, tech }) {
   return (

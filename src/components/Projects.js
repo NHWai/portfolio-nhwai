@@ -6,7 +6,7 @@ import PjDatas from "../assests/pjdata.json";
 import Webflow from "../assests/webflow-icon.svg";
 import VanillaJs from "../assests/javascript-horizontal.svg";
 import ReAct from "../assests/reactjs-icon.svg";
-import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import TechStack from "./TechStack";
 import tt from "../assests/techstack.svg";
 

@@ -21,6 +21,10 @@
   color: #fff;
 }
 
+.techstack img {
+  width: 2rem;
+}
+
 .cap {
   font-size: 2rem;
   font-weight: 600;
@@ -156,7 +160,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: #f0fff0;
-  background: linear-gradient(45deg, #008674, transparent);
+  background: #008674;
   display: flex;
   align-items: center;
   justify-content: space-between;

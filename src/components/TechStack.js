@@ -1,6 +1,7 @@
 import React from "react";
 import { FaBootstrap, FaReact, FaHtml5, FaCss3 } from "react-icons/fa";
-import { motion } from "framer-motion/dist/framer-motion";
+import { motion } from "framer-motion";
+import tailwind from "../assests/tailwindcss-icon-white.svg";
 
 function TechStack() {
   const childVariant = {
@@ -29,6 +30,9 @@ function TechStack() {
       </motion.div>
       <motion.div variants={childVariant}>
         <FaReact />
+      </motion.div>
+      <motion.div variants={childVariant}>
+        <img src={tailwind} />
       </motion.div>
     </>
   );

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "../css/about.css";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion/dist/framer-motion";
-import AboutMeSvg from "./AboutMeSvg";
-import Ques from "./Ques";
+import { motion } from "framer-motion";
+import ideas from "../assests/ideas.gif";
+import Slider from "./Slider";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
+import { FaCode } from "react-icons/fa";
 
 function About() {
   const [show, setShow] = useState(false);
@@ -31,6 +33,7 @@ function About() {
       },
     },
   };
+
   return (
     <motion.div
       variants={containerVariant}
@@ -47,37 +50,60 @@ function About() {
       }}
     >
       <div className="inner">
-        <motion.div
-          className="ques"
-          initial={{ rotate: 0, y: 0 }}
-          animate={{ rotate: 180, y: 60 }}
-          transition={{ delay: 1, duration: 0.3, rotate: { type: "spring" } }}
-        >
-          <Ques />
-        </motion.div>
-
         <div className="abt-contain">
-          <div className={`slider ${show && "active"} `}>
+          <Slider isShow={isShow} show={show} />
+          <div className="skills">
             <div className="pg-heading-contain">
-              <div className="pg-heading"> About Me </div>
+              <div className="pg-heading">Skills</div>
               <span className="underline left"></span>
               <span className="underline right"></span>
             </div>
-            <button onClick={isShow} className="btn-switch">
-              {!show ? <> See More &#8594; </> : <>&#8592; See Less</>}
-            </button>
-          </div>
-          <div className={`abtme-description ${show && "active"} `}>
-            <FaQuoteLeft className="quote left" />
-            <div>
-              lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Adipisci ipsum molestias dicta perferendis explicabo sequi
-              nisi sed voluptatem nostrum quisquam.
+            <div className="skill-item_contain">
+              <div className="skill-item">
+                <div className="skill-item-caption">HTML</div>
+                <div className="progress-bar">
+                  <div
+                    style={{ background: "rgb(70, 70, 255)", width: "65%" }}
+                    className="progress"
+                  ></div>
+                </div>
+              </div>
+
+              <div className="skill-item">
+                <div className="skill-item-caption">CSS </div>
+                <div className="progress-bar">
+                  <div
+                    style={{ background: "orangered", width: "75%" }}
+                    className="progress"
+                  ></div>
+                </div>
+              </div>
             </div>
-            <FaQuoteRight className="quote right" />
           </div>
 
-          <AboutMeSvg show={show} />
+          <div className="services">
+            <div className="pg-heading-contain">
+              <div className="pg-heading">Services </div>
+              <span className="underline left"></span>
+              <span className="underline right"></span>
+            </div>
+            <div className="service-items">
+              <div className="service-item">
+                <img src={ideas} />
+                <p>
+                  Creative <br /> Ideas
+                </p>
+              </div>
+              <div className="service-item">
+                <div className="code-icon">
+                  <FaCode />
+                </div>
+                <p>
+                  Web <br /> Development
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>

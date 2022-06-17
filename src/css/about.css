@@ -6,11 +6,43 @@
   margin-top: -1rem;
   position: relative;
   display: flex;
+  justify-content: space-between;
   width: 60%;
   height: 70%;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.skills {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-item_contain {
+  width: 100%;
+}
+
+.skill-item {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 3px;
+  background-color: #ddd;
+}
+
+.progress {
+  height: 100%;
+}
+
+.skill-item-caption {
+  font-size: 1.2rem;
 }
 
 .abtme-description {
@@ -19,20 +51,8 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 50%;
   padding: 2rem;
   font-style: italic;
-  opacity: 0.45;
-}
-
-.abtme-description.active {
-  opacity: 1;
-}
-
-.quote-text {
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .quote {
@@ -46,17 +66,6 @@
 
 .quote.right {
   margin-left: auto;
-}
-
-.abtme-svg {
-  padding: 2rem;
-  width: 50%;
-  height: 100%;
-  opacity: 1;
-}
-
-.abtme-svg.active {
-  opacity: 0;
 }
 
 .slider {
@@ -97,4 +106,42 @@
   color: #fff;
   text-shadow: 0 0 5px #000;
   cursor: pointer;
+}
+
+.services {
+  width: 50%;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.service-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.service-item > p {
+  color: rgb(30, 73, 73);
+  text-align: center;
+}
+
+.service-item > img {
+  width: 100px;
+}
+
+.code-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 55px;
+}
+
+.code-icon > * {
+  font-size: 2rem;
+  color: rgb(30, 73, 73);
 }
