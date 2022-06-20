@@ -11,6 +11,7 @@
   background: #008674;
   color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 1%;
   align-items: center;
@@ -37,6 +38,10 @@
 .cap:hover {
   -webkit-text-stroke: 2px #489a7e;
   -webkit-text-fill-color: white;
+}
+
+.techicon {
+  display: inline-block;
 }
 
 .project {
@@ -114,7 +119,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top left;
+  object-position: center;
 }
 
 .code-demo {
@@ -140,6 +145,7 @@
   border-radius: 10px;
   color: #fff;
   border: none;
+  text-decoration: none;
 }
 
 .code-demo a:active {
@@ -170,7 +176,7 @@
 }
 
 .tech-logo {
-  width: 1rem;
+  width: 2rem;
 }
 
 .tech-logo:not(:last-child) {

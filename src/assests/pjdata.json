@@ -1,21 +1,29 @@
 [
   {
-    "name": "Landing Page",
-    "comment": "Project from FrontEnd Mentor",
-    "tech": ["Tailwind", "VanillaJs"],
-    "tabname": "React"
+    "name": "Quizzical App",
+    "comment": "Project from Scrimba",
+    "tech": ["ReAct"],
+    "tabname": "React",
+    "imgurl": "https://img-for-portfolio.vercel.app/img/quizzical-react.png",
+    "codeurl": "https://github.com/NHWai/quizzies-app",
+    "demourl": "https://quizzies-app.vercel.app/"
   },
   {
-    "name": "Page",
-    "comment": "Project from FrontEnd Mentor",
-    "tech": ["BootStrap", "VanillaJs"],
-    "tabname": "Vanilla JS"
+    "name": "Tenzies",
+    "comment": "Project from Scrimba",
+    "tech": ["ReAct"],
+    "tabname": "React",
+    "imgurl": "https://img-for-portfolio.vercel.app/img/tenzies-react.png",
+    "codeurl": "https://github.com/NHWai/Tenzies-from-Scrimba",
+    "demourl": "https://tenzies-from-scrimba.vercel.app/"
   },
   {
-    "name": "Lan Page",
-    "comment": "Project from FrontEnd Mentor",
-    "tech": ["ReAct", "VanillaJs"],
-    "tabname": "Webflow"
+    "name": "Ziwa Vita",
+    "comment": "Client Project",
+    "tech": ["Webflow"],
+    "tabname": "Webflow",
+    "imgurl": "https://img-for-portfolio.vercel.app/img/ziwa-vita.png",
+    "demourl": "https://www.ziwa-vita.com/"
   },
   {
     "name": "Lage",

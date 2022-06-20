@@ -19,19 +19,19 @@ function TechStack() {
 
   return (
     <>
-      <motion.div variants={childVariant}>
+      <motion.div className="techicon" variants={childVariant}>
         <FaHtml5 />
       </motion.div>
-      <motion.div variants={childVariant}>
+      <motion.div className="techicon" variants={childVariant}>
         <FaCss3 />
       </motion.div>
-      <motion.div variants={childVariant}>
+      <motion.div className="techicon" variants={childVariant}>
         <FaBootstrap />
       </motion.div>
-      <motion.div variants={childVariant}>
+      <motion.div className="techicon" variants={childVariant}>
         <FaReact />
       </motion.div>
-      <motion.div variants={childVariant}>
+      <motion.div className="techicon" variants={childVariant}>
         <img src={tailwind} />
       </motion.div>
     </>

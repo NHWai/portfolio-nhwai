@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Profilesvg from "./Profilesvg";
 import SocialBar from "./SocialBar";
@@ -8,6 +8,22 @@ import Description from "./Description";
 
 function Home() {
   const navigate = useNavigate();
+  const [startY, setStartY] = useState(0);
+  const [moveY, setMoveY] = useState(0);
+  const touchstart = (e) => {
+    setStartY((pre) => (pre = e.touches[0].clientY));
+  };
+
+  const touchmove = (e) => {
+    setMoveY((pre) => (pre = e.touches[0].clientY));
+  };
+
+  const touchend = () => {
+    if (moveY && startY + 10 < moveY) {
+      navigate("/about");
+    }
+  };
+
   const containerVariant = {
     hidden: {
       opacity: 0,
@@ -16,7 +32,6 @@ function Home() {
       opacity: 1,
       transition: {
         duration: 1,
-        // when: "beforeChildren",
       },
     },
     exit: {
@@ -74,26 +89,11 @@ function Home() {
     },
   };
 
-  const socicalBarVariant = {
-    hidden: {
-      y: "100vh",
-    },
-    visible: {
-      y: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-    exit: {
-      y: "100vh",
-      transition: {
-        type: "tween",
-      },
-    },
-  };
-
   return (
     <motion.div
+      onTouchStart={touchstart}
+      onTouchMove={touchmove}
+      onTouchEnd={touchend}
       variants={containerVariant}
       initial="hidden"
       animate="visible"
@@ -109,10 +109,10 @@ function Home() {
         <div className="home">
           <motion.div className="intro" variants={introVariant}>
             <div className="header">
-              Hi, I'm <br /> <Logo />
+              <div className="header-intro">Hi I'm</div>
+              <Logo />
             </div>
             <div className="sub-header">Frontend Developer</div>
-
             <Description />
           </motion.div>
           <motion.div className="profile" variants={profileVariant}>
@@ -121,9 +121,9 @@ function Home() {
             </motion.div>
           </motion.div>
         </div>
-        <motion.div className="social-bar_contain" variants={socicalBarVariant}>
+        <div className="social-bar_contain">
           <SocialBar />
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );

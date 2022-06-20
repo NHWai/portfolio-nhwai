@@ -50,12 +50,9 @@
 }
 
 .contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 1%;
+  width: 90%;
+  overflow: hidden;
   position: relative;
-  width: 80%;
   max-width: 30rem;
   background: linear-gradient(45deg, rgb(30, 73, 73), rgba(77, 196, 156, 0.9));
   padding: 2rem;
@@ -66,10 +63,6 @@
   position: absolute;
   right: 5%;
   top: 5%;
-}
-
-.message {
-  grid-column: 1/-1;
 }
 
 .message-input {
@@ -93,7 +86,6 @@
 }
 
 .submit-btn {
-  grid-column: 2/-1;
   margin-top: 1.3rem;
   background-color: transparent;
   border: 1px solid #fff;
@@ -116,6 +108,7 @@
 }
 
 .input {
+  width: 100%;
   margin-top: 2rem;
   padding: 1rem 0 0.1rem;
   background: transparent;
@@ -136,7 +129,7 @@
 
 label {
   position: absolute;
-  top: 2.5rem;
+  top: 0.8rem;
   left: 0;
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
@@ -149,6 +142,7 @@ label > span {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.input:focus + label > span {
+.input:focus + label > span,
+.input:valid + label > span {
   transform: translateY(-90%);
 }

@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import Pjcard from "./Pjcard";
 import { useNavigate } from "react-router-dom";
-
 import PjDatas from "../assests/pjdata.json";
 import Webflow from "../assests/webflow-icon.svg";
 import VanillaJs from "../assests/javascript-horizontal.svg";
 import ReAct from "../assests/reactjs-icon.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import TechStack from "./TechStack";
-import tt from "../assests/techstack.svg";
 
 function Projects() {
   const navigate = useNavigate();
@@ -16,6 +14,24 @@ function Projects() {
   const initial = [item1, item2, item3];
 
   const [selected, setSelected] = useState(initial[0]);
+  const [startY, setStartY] = useState(0);
+  const [moveY, setMoveY] = useState(0);
+  const touchstart = (e) => {
+    setStartY((pre) => (pre = e.touches[0].clientY));
+  };
+
+  const touchmove = (e) => {
+    setMoveY((pre) => e.touches[0].clientY);
+  };
+
+  const touchend = (e) => {
+    if (moveY && startY + 10 > moveY) {
+      navigate("/about");
+    }
+    if (moveY && startY + 10 < moveY) {
+      navigate("/");
+    }
+  };
 
   const containerVariant = {
     hidden: {},
@@ -37,9 +53,15 @@ function Projects() {
 
   return (
     <motion.div
+      onTouchStart={touchstart}
+      onTouchMove={touchmove}
+      onTouchEnd={touchend}
       onWheel={(e) => {
         if (e.deltaY < 0) {
           navigate("/about");
+        }
+        if (e.deltaY > 0) {
+          navigate("/");
         }
       }}
       className="content"
@@ -56,7 +78,7 @@ function Projects() {
               {initial.map((item) => {
                 return (
                   <div
-                    key={item.tabname}
+                    key={item.name}
                     className={`tab ${item === selected && "selected"} `}
                     onClick={() => setSelected(item)}
                   >
@@ -85,20 +107,28 @@ function Projects() {
                 exit={{ y: -10, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <Pjcard name={selected.name} tech={selected.tech} />
+                <Pjcard
+                  name={selected.name}
+                  tech={selected.tech}
+                  imgurl={selected.imgurl}
+                  codeurl={selected.codeurl}
+                  demourl={selected.demourl}
+                />
               </motion.div>
             </AnimatePresence>
           </div>
         </div>
-        <motion.div
+        {/* <motion.div
           className="techstack"
           variants={techstackVariant}
           initial="hidden"
           animate="visible"
         >
           <div className="cap">techstack</div>
-          <TechStack />
-        </motion.div>
+          <div className="icons">
+            <TechStack />
+          </div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

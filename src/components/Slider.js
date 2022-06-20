@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Ques from "./Ques";
 import { motion } from "framer-motion";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 function Slider({ isShow, show }) {
+  const [renderAbt, setrenderAbt] = useState(false);
+
+  const showAbt = (e) => {
+    e.stopPropagation();
+    setrenderAbt((pre) => !pre);
+  };
+
   const btnVariant = {
     hidden: {
       scale: 1,
@@ -21,17 +28,22 @@ function Slider({ isShow, show }) {
 
   return (
     <div className={`slider ${show && "active"} `}>
-      {show ? (
+      {renderAbt ? (
         <div className="abtme-description">
-          <FaQuoteLeft className="quote left" />
-          <div>
-            lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Adipisci ipsum molestias dicta perferendis explicabo sequi nisi sed
-            voluptatem nostrum quisquam.
+          <div className="eating">
+            Hello! I am Naing Htet Wai. Front-End Developer who focuses on
+            writing clean code and creative web design with HTML, CSS and React
+            JS.
+            <small
+              style={{ color: "#aaa", cursor: "pointer", marginLeft: "1rem" }}
+              onClick={(e) => showAbt(e)}
+            >
+              See Less
+            </small>
           </div>
-          <FaQuoteRight className="quote right" />
-          <motion.button onClick={isShow} className="btn-switch">
-            See Less
+
+          <motion.button onClick={(e) => isShow(e)} className="btn-switch">
+            {show ? "Close" : "Explore"}
           </motion.button>
         </div>
       ) : (
@@ -43,8 +55,9 @@ function Slider({ isShow, show }) {
             <span className="underline right"></span>
           </div>
           <motion.button
+            style={{ marginTop: "2rem" }}
             variants={btnVariant}
-            onClick={isShow}
+            onClick={(e) => showAbt(e)}
             className="btn-switch"
           >
             See More

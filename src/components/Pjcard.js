@@ -5,16 +5,24 @@ import VanillaJs from "../assests/javascript-horizontal-white.svg";
 import BootStrap from "../assests/getbootstrap-icon.svg";
 import ReAct from "../assests/reactjs-icon-white.svg";
 
-function Pjcard({ name, tech }) {
+function Pjcard({ name, tech, imgurl, codeurl, demourl }) {
   return (
     <div className="pj-card">
       <div className="pj-card-img">
         <div className="code-demo">
-          <a>Code </a>
-          <a>Demo</a>
+          {codeurl && (
+            <a target="_blank" rel="noopener noreferrer" href={codeurl}>
+              Code{" "}
+            </a>
+          )}
+          {demourl && (
+            <a target="_blank" rel="noopener noreferrer" href={demourl}>
+              Demo
+            </a>
+          )}
         </div>
 
-        <img src="https://img-for-portfolio.vercel.app/img/landing-page-tailwind.png" />
+        <img src={imgurl} />
       </div>
 
       <div className="pj-card-caption">

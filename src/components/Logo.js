@@ -4,7 +4,7 @@ import { FaCode } from "react-icons/fa";
 
 function Logo() {
   return (
-    <div className="start">
+    <div className="logo">
       <span className="end1">n</span>
       <span className="middle1">ai htet wa</span>
       <span className="middle2">

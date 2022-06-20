@@ -4,16 +4,41 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ideas from "../assests/ideas.gif";
 import Slider from "./Slider";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import { FaCode } from "react-icons/fa";
+import Skillitem from "./Skillitem";
 
 function About() {
   const [show, setShow] = useState(false);
-
-  const isShow = () => setShow((pre) => !pre);
-
   const navigate = useNavigate();
+  const [startY, setStartY] = useState(0);
+  const [moveY, setMoveY] = useState(0);
+  const touchstart = (e) => {
+    console.log("firestart");
+    setStartY((pre) => (pre = e.touches[0].clientY));
+  };
+
+  const touchmove = (e) => {
+    console.log("firemove");
+
+    setMoveY((pre) => (pre = e.touches[0].clientY));
+  };
+
+  const touchend = (e) => {
+    console.log("fireend");
+    if (moveY && startY + 10 > moveY) {
+      navigate("/");
+    }
+    if (moveY && startY + 10 < moveY) {
+      navigate("/projects");
+    }
+  };
+
+  const isShow = (e) => {
+    e.stopPropagation();
+    setShow((pre) => !pre);
+  };
+
   const containerVariant = {
     hidden: {
       y: "-100vh",
@@ -36,6 +61,9 @@ function About() {
 
   return (
     <motion.div
+      onTouchStart={touchstart}
+      onTouchMove={touchmove}
+      onTouchEnd={touchend}
       variants={containerVariant}
       initial="hidden"
       animate="visible"
@@ -52,36 +80,24 @@ function About() {
       <div className="inner">
         <div className="abt-contain">
           <Slider isShow={isShow} show={show} />
-          <div className="skills">
+          <div style={{ opacity: `${show ? 1 : 0}` }} className="skills">
             <div className="pg-heading-contain">
               <div className="pg-heading">Skills</div>
               <span className="underline left"></span>
               <span className="underline right"></span>
             </div>
-            <div className="skill-item_contain">
-              <div className="skill-item">
-                <div className="skill-item-caption">HTML</div>
-                <div className="progress-bar">
-                  <div
-                    style={{ background: "rgb(70, 70, 255)", width: "65%" }}
-                    className="progress"
-                  ></div>
-                </div>
-              </div>
+            {show && (
+              <div className="skill-item_contain">
+                <Skillitem skill="HTML" width={95} bg="rgb(70, 70, 255)" />
+                <Skillitem skill="CSS" width={90} bg="orangered" />
+                <Skillitem skill="Github" width={60} bg="green" />
 
-              <div className="skill-item">
-                <div className="skill-item-caption">CSS </div>
-                <div className="progress-bar">
-                  <div
-                    style={{ background: "orangered", width: "75%" }}
-                    className="progress"
-                  ></div>
-                </div>
+                <Skillitem skill="React" width={70} bg="lightblue" />
               </div>
-            </div>
+            )}
           </div>
 
-          <div className="services">
+          <div className={`services ${show && "active"}`}>
             <div className="pg-heading-contain">
               <div className="pg-heading">Services </div>
               <span className="underline left"></span>

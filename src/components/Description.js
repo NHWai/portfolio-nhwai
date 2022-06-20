@@ -33,7 +33,7 @@ function Description() {
     show();
   }
   return (
-    <div className="container">
+    <div className="description">
       <div className="text" ref={ref}></div>
       <span className="cursor">a</span>
     </div>
