@@ -19,7 +19,7 @@ function Home() {
   };
 
   const touchend = () => {
-    if (moveY && startY + 10 < moveY) {
+    if (moveY && startY + 10 > moveY) {
       navigate("/about");
     }
   };
@@ -78,16 +78,16 @@ function Home() {
     },
   };
 
-  const blobVariant = {
-    visible: {
-      scale: 1.1,
-      transition: {
-        delay: 6,
-        yoyo: "Infinity",
-        duration: 1,
-      },
-    },
-  };
+  // const blobVariant = {
+  //   visible: {
+  //     scale: 1.1,
+  //     transition: {
+  //       delay: 6,
+  //       yoyo: "Infinity",
+  //       duration: 1,
+  //     },
+  //   },
+  // };
 
   return (
     <motion.div
@@ -116,7 +116,7 @@ function Home() {
             <Description />
           </motion.div>
           <motion.div className="profile" variants={profileVariant}>
-            <motion.div className="blob" variants={blobVariant}>
+            <motion.div className="blob">
               <Profilesvg />
             </motion.div>
           </motion.div>

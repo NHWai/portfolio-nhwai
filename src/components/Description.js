@@ -4,7 +4,7 @@ import "../css/description.css";
 function Description() {
   useEffect(() => {
     setTimeout(typing, 2000);
-    return function cleanup() {
+    return () => {
       clearTimeout(typing);
     };
   }, []);

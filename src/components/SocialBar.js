@@ -46,7 +46,7 @@ function SocialBar() {
         style={{ background: "#000" }}
         className="social-icon-contain"
         target="_blank"
-        href="https://www.google.com/doodles"
+        href="https://github.com/NHWai"
       >
         <FaGithub className="social-icon" />
         <div className="social-icon-text"> Github </div>
@@ -56,27 +56,27 @@ function SocialBar() {
         style={{ background: "#00acee" }}
         className="social-icon-contain"
         target="_blank"
-        href="https://www.google.com/doodles"
+        href="https://twitter.com/Archerootw"
       >
         <FaTwitter className="social-icon" />
         <div className="social-icon-text"> Twitter </div>
       </motion.a>
 
       <motion.a
-        style={{ background: "#0088cc" }}
+        style={{ background: "#000" }}
         className="social-icon-contain"
         target="_blank"
-        href="https://www.google.com/doodles"
+        href="mailto:nayhtetwinee@gmail.com?subject=The%20subject%20of%20the%20email"
       >
         <FaTelegram className="social-icon" />
-        <div className="social-icon-text"> Telegram </div>
+        <div className="social-icon-text">Gmail </div>
       </motion.a>
 
       <motion.a
         style={{ background: "#0072b1" }}
         className="social-icon-contain"
         target="_blank"
-        href="https://www.google.com/doodles"
+        href="https://www.linkedin.com/in/naing-htet-wai-28770a194/"
       >
         <FaLinkedin className="social-icon" />{" "}
         <div className="social-icon-text"> LinkedIn </div>

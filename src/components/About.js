@@ -14,22 +14,18 @@ function About() {
   const [startY, setStartY] = useState(0);
   const [moveY, setMoveY] = useState(0);
   const touchstart = (e) => {
-    console.log("firestart");
     setStartY((pre) => (pre = e.touches[0].clientY));
   };
 
   const touchmove = (e) => {
-    console.log("firemove");
-
     setMoveY((pre) => (pre = e.touches[0].clientY));
   };
 
   const touchend = (e) => {
-    console.log("fireend");
-    if (moveY && startY + 10 > moveY) {
+    if (moveY && startY + 10 < moveY) {
       navigate("/");
     }
-    if (moveY && startY + 10 < moveY) {
+    if (moveY && startY + 10 > moveY) {
       navigate("/projects");
     }
   };

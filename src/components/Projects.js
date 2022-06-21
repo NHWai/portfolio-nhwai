@@ -25,12 +25,12 @@ function Projects() {
   };
 
   const touchend = (e) => {
-    if (moveY && startY + 10 > moveY) {
+    if (moveY && startY + 10 < moveY) {
       navigate("/about");
     }
-    if (moveY && startY + 10 < moveY) {
-      navigate("/");
-    }
+    // if (moveY && startY + 10 < moveY) {
+    //   navigate("/");
+    // }
   };
 
   const containerVariant = {

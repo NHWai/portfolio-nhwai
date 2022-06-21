@@ -11,20 +11,20 @@ function Slider({ isShow, show }) {
     setrenderAbt((pre) => !pre);
   };
 
-  const btnVariant = {
-    hidden: {
-      scale: 1,
-    },
-    visible: {
-      scale: 1.04,
-      transition: {
-        delay: 2,
-        duration: 0.5,
-        yoyo: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
+  // const btnVariant = {
+  //   hidden: {
+  //     scale: 1,
+  //   },
+  //   visible: {
+  //     scale: 1.04,
+  //     transition: {
+  //       delay: 2,
+  //       duration: 0.5,
+  //       yoyo: Infinity,
+  //       ease: "easeInOut",
+  //     },
+  //   },
+  // };
 
   return (
     <div className={`slider ${show && "active"} `}>
@@ -56,7 +56,6 @@ function Slider({ isShow, show }) {
           </div>
           <motion.button
             style={{ marginTop: "2rem" }}
-            variants={btnVariant}
             onClick={(e) => showAbt(e)}
             className="btn-switch"
           >
