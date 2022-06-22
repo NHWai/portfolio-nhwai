@@ -120,9 +120,9 @@ function Home() {
               <Profilesvg />
             </motion.div>
           </motion.div>
-        </div>
-        <div className="social-bar_contain">
-          <SocialBar />
+          <div className="social-bar_contain">
+            <SocialBar />
+          </div>
         </div>
       </div>
     </motion.div>
