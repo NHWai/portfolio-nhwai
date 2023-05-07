@@ -6,13 +6,14 @@ function Ques() {
     hidden: {
       x: 100,
       y: 40,
+
       rotate: 180,
       originX: 0,
       originY: 0,
     },
     visible: {
-      x: 100,
-      y: 40,
+      x: 40, //40
+      y: window.innerWidth > 300 ? 90 : 70, //70
       originX: 0,
       originY: 0,
       rotate: 360,

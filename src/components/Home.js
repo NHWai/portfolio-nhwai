@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Profilesvg from "./Profilesvg";
 import SocialBar from "./SocialBar";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
 import Description from "./Description";
+import CV from "../assests/NHWai_Resume.pdf";
 
 function Home() {
   const navigate = useNavigate();
@@ -78,17 +79,6 @@ function Home() {
     },
   };
 
-  // const blobVariant = {
-  //   visible: {
-  //     scale: 1.1,
-  //     transition: {
-  //       delay: 6,
-  //       yoyo: "Infinity",
-  //       duration: 1,
-  //     },
-  //   },
-  // };
-
   return (
     <motion.div
       onTouchStart={touchstart}
@@ -112,8 +102,10 @@ function Home() {
               <div className="header-intro">Hi I'm</div>
               <Logo />
             </div>
-            <div className="sub-header">Frontend Developer</div>
             <Description />
+            <a className="sub-header" href={CV} download>
+              <div>Download CV</div>
+            </a>
           </motion.div>
           <motion.div className="profile" variants={profileVariant}>
             <motion.div className="blob">

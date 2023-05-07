@@ -76,46 +76,51 @@ function About() {
       <div className="inner">
         <div className="abt-contain">
           <Slider isShow={isShow} show={show} />
-          <div style={{ opacity: `${show ? 1 : 0}` }} className="skills">
+
+          <div className="skills">
             <div className="pg-heading-contain">
               <div className="pg-heading">Skills</div>
               <span className="underline left"></span>
               <span className="underline right"></span>
             </div>
+
             {show && (
               <div className="skill-item_contain">
                 <Skillitem skill="HTML" width={95} bg="rgb(70, 70, 255)" />
                 <Skillitem skill="CSS" width={90} bg="orangered" />
                 <Skillitem skill="Github" width={60} bg="green" />
-
-                <Skillitem skill="React" width={70} bg="lightblue" />
+                <Skillitem skill="React" width={65} bg="#61dbfb" />
+                <Skillitem skill="Typescript" width={50} bg="#007acc" />
+                <Skillitem skill="Nodejs" width={45} bg="#303030" />
               </div>
             )}
           </div>
 
-          <div className={`services ${show && "active"}`}>
-            <div className="pg-heading-contain">
-              <div className="pg-heading">Services </div>
-              <span className="underline left"></span>
-              <span className="underline right"></span>
-            </div>
-            <div className="service-items">
-              <div className="service-item">
-                <img src={ideas} />
-                <p>
-                  Creative <br /> Ideas
-                </p>
+          {window.innerWidth < 640 && show ? null : (
+            <div className={`services`}>
+              <div className="pg-heading-contain">
+                <div className="pg-heading">Services</div>
+                <span className="underline left"></span>
+                <span className="underline right"></span>
               </div>
-              <div className="service-item">
-                <div className="code-icon">
-                  <FaCode />
+              <div className="service-items">
+                <div className="service-item">
+                  <img src={ideas} />
+                  <p>
+                    Creative <br /> Ideas
+                  </p>
                 </div>
-                <p>
-                  Web <br /> Development
-                </p>
+                <div className="service-item">
+                  <div className="code-icon">
+                    <FaCode />
+                  </div>
+                  <p>
+                    Web <br /> Development
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </motion.div>

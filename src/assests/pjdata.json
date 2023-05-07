@@ -1,5 +1,14 @@
 [
   {
+    "name": "Movie App",
+    "comment": "Project from Scrimba",
+    "tech": ["ReAct","Typescript","Nodejs"],
+    "tabname": "React",
+    "imgurl": "https://img-for-portfolio.vercel.app/img/movie-app-img.jpg",
+    "codeurl": "https://github.com/NHWai/movie-app",
+    "demourl": "https://movie-app-six-nu.vercel.app/"
+  },
+  {
     "name": "Quizzical App",
     "comment": "Project from Scrimba",
     "tech": ["ReAct"],
@@ -7,6 +16,15 @@
     "imgurl": "https://img-for-portfolio.vercel.app/img/quizzical-react.png",
     "codeurl": "https://github.com/NHWai/quizzies-app",
     "demourl": "https://quizzies-app.vercel.app/"
+  },
+ 
+  {
+    "name": "Ziwa Vita",
+    "comment": "Client Project",
+    "tech": ["Webflow"],
+    "tabname": "Webflow",
+    "imgurl": "https://img-for-portfolio.vercel.app/img/ziwa-vita.png",
+    "demourl": "https://www.ziwa-vita.com/"
   },
   {
     "name": "Tenzies",
@@ -16,14 +34,6 @@
     "imgurl": "https://img-for-portfolio.vercel.app/img/tenzies-react.png",
     "codeurl": "https://github.com/NHWai/Tenzies-from-Scrimba",
     "demourl": "https://tenzies-from-scrimba.vercel.app/"
-  },
-  {
-    "name": "Ziwa Vita",
-    "comment": "Client Project",
-    "tech": ["Webflow"],
-    "tabname": "Webflow",
-    "imgurl": "https://img-for-portfolio.vercel.app/img/ziwa-vita.png",
-    "demourl": "https://www.ziwa-vita.com/"
   },
   {
     "name": "Lage",

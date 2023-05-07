@@ -40,6 +40,8 @@
   max-width: 0;
 }
 
+
+
 @keyframes ani1 {
   0% {
     max-width: 500px;
@@ -86,6 +88,6 @@
 
 @media (max-width: 768px) {
   .logo {
-    font-size: 1.9em;
+    font-size: 1.4em;
   }
 }
