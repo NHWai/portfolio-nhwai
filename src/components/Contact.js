@@ -50,10 +50,10 @@ function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
+    console.log(formData);
     try {
       const response = await fetch(
-        "https://v1.nocodeapi.com/nhwai/google_sheets/eKDbjMymercwWDgv?tabId=Portfolio",
+        "https://v1.nocodeapi.com/nhwai/google_sheets/eKDbjMymercwWDgv/addRows?tabId=Portfolio",
         {
           method: "POST",
           headers: {

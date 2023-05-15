@@ -155,3 +155,8 @@
 .tech-logo:not(:last-child) {
   margin-right: 0.5rem;
 }
+
+/* mutating the carousle built-in css */
+.react-multiple-carousel__arrow{
+  z-index: 5 !important;
+}

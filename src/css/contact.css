@@ -144,5 +144,5 @@ label > span {
 
 .input:focus + label > span,
 .input:valid + label > span {
-  transform: translateY(-90%);
+  transform: translateY(-105%);
 }
