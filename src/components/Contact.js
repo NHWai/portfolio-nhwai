@@ -33,15 +33,6 @@ function Contact() {
     });
   }
 
-  // const isValid = () => {
-  //   const inputs = document.querySelectorAll("input");
-  //   inputs.forEach((input) => {
-  //     if (input.value) {
-  //       console.log(input.name);
-  //     }
-  //   });
-  // };
-
   const handleChange = (e) => {
     setFormData((pre) => {
       return { ...pre, [e.target.name]: e.target.value };
@@ -50,39 +41,29 @@ function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
-    try {
-      const response = await fetch(
-        "https://v1.nocodeapi.com/nhwai/google_sheets/eKDbjMymercwWDgv/addRows?tabId=Portfolio",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify([
-            [
-              formData.clientName,
-              formData.clientEmail,
-              formData.clientPhone,
-              formData.clientSubject,
-              formData.clientMessage,
-              new Date().toLocaleString(),
-            ],
-          ]),
-        }
-      );
+    const formEl = new FormData(event.target);
+    const date = new Date(Date.now());
+    formEl.append("date", date);
 
-      await response.json();
-      setFormData({
-        ...formData,
-        clientName: "",
-        clientEmail: "",
-        clientPhone: "",
-        clientSubject: "",
-        clientMessage: "",
+    try {
+      const response = await fetch(process.env.REACT_APP_FORMENDPOINT, {
+        method: "POST",
+        body: formEl,
       });
-      setIsComplete(true);
-      setTimeout(() => setIsComplete(false), 3000);
+      if (response.status) {
+        setFormData({
+          ...formData,
+          clientName: "",
+          clientEmail: "",
+          clientPhone: "",
+          clientSubject: "",
+          clientMessage: "",
+        });
+        setIsComplete(true);
+        setTimeout(() => setIsComplete(false), 3000);
+      } else {
+        throw new Error("Something wrong!!");
+      }
     } catch (err) {
       alert(err);
     }

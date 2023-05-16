@@ -86,11 +86,11 @@ function About() {
 
             {show && (
               <div className="skill-item_contain">
-                <Skillitem skill="HTML" width={95} bg="rgb(70, 70, 255)" />
-                <Skillitem skill="CSS" width={90} bg="orangered" />
-                <Skillitem skill="Github" width={60} bg="green" />
-                <Skillitem skill="React" width={65} bg="#61dbfb" />
-                <Skillitem skill="Typescript" width={50} bg="#007acc" />
+                <Skillitem skill="HTML" width={75} bg="rgb(70, 70, 255)" />
+                <Skillitem skill="CSS" width={70} bg="orangered" />
+                <Skillitem skill="Github" width={50} bg="green" />
+                <Skillitem skill="React" width={60} bg="#61dbfb" />
+                <Skillitem skill="Typescript" width={45} bg="#007acc" />
                 <Skillitem skill="Nodejs" width={45} bg="#303030" />
               </div>
             )}
