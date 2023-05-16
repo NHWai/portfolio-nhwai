@@ -5,7 +5,7 @@ import SocialBar from "./SocialBar";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
 import Description from "./Description";
-import CV from "../assests/NHWai_Resume.pdf";
+import CV from "../assests/Resume_NHWai.pdf";
 
 function Home() {
   const navigate = useNavigate();
