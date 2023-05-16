@@ -46,11 +46,14 @@ function Contact() {
     formEl.append("date", date);
 
     try {
-      const response = await fetch(process.env.REACT_APP_FORMENDPOINT, {
-        method: "POST",
-        body: formEl,
-      });
-      if (response.status) {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzNpwtx8iC_K1SELwjO-wj8uuM61jTBLEJfABWSn9JpnTPNgPCk4N1WVol9CW7tI4Pq/exec",
+        {
+          method: "POST",
+          body: formEl,
+        }
+      );
+      if (response.status === 200) {
         setFormData({
           ...formData,
           clientName: "",
