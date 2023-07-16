@@ -8,8 +8,8 @@ import "react-multi-carousel/lib/styles.css";
 
 function Projects() {
   const navigate = useNavigate();
-  const [item1, item2, item3] = PjDatas;
-  const initial = [item1, item2, item3];
+  const [item1, item2, item3, item4, item5] = PjDatas;
+  const initial = [item1, item2, item3, item4, item5];
 
   const [startY, setStartY] = useState(0);
   const [moveY, setMoveY] = useState(0);

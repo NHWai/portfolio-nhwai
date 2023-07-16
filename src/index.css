@@ -205,7 +205,7 @@ body {
 }
 
 .social-icon-contain:hover {
-  transform: translateY(-10px);
+  transform: translateY(-3px);
 }
 
 .social-icon-contain:active {

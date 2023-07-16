@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaGithub,
-  FaTwitter,
-  FaTelegram,
-  FaLinkedin,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaGithub, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function SocialBar() {
@@ -28,18 +22,6 @@ function SocialBar() {
     },
   };
 
-  const childVariant = {
-    hidden: {
-      y: 3,
-    },
-    visible: {
-      y: 0,
-      transition: {
-        duration: 0.6,
-        yoyo: "Infinity",
-      },
-    },
-  };
   return (
     <motion.div variants={containerVariant} className="social-bar">
       <motion.a
