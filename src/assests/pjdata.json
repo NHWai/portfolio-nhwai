@@ -1,7 +1,16 @@
 [
   {
+    "name": "Food4Life POS",
+    "comment": "Own Idea Project",
+    "tech": ["ReAct","Typescript","Nodejs","NextJs"],
+    "tabname": "React",
+    "imgurl": "https://res.cloudinary.com/dddpq79jt/image/upload/v1694367434/nhwai-portfolio-assets/n2formpiml6m1i5xg0oo.jpg",
+    "codeurl": "https://github.com/NHWai/happy-pos-nextapp-nhwai",
+    "demourl": "https://happy-pos-nextapp-nhwai.vercel.app/"
+  },
+  {
     "name": "Movie App",
-    "comment": "Project from Scrimba",
+    "comment": "Own Idea Project",
     "tech": ["ReAct","Typescript","Nodejs"],
     "tabname": "React",
     "imgurl": "https://img-for-portfolio.vercel.app/img/movie-app-img.jpg",

@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/projects.css";
 import Tailwind from "../assests/tailwindcss-icon-white.svg";
+import NextJs from "../assests/nextjs.svg";
 import VanillaJs from "../assests/javascript-horizontal-white.svg";
 import ReAct from "../assests/reactjs-icon-white.svg";
 import Typescript from "../assests/typescript-official-svgrepo-com.svg";
@@ -43,6 +44,9 @@ function Pjcard({ name, tech, imgurl, codeurl, demourl }) {
           )}
           {tech.some((el) => el === "ReAct") && (
             <img className="tech-logo" src={ReAct} />
+          )}
+          {tech.some((el) => el === "NextJs") && (
+            <img className="tech-logo" src={NextJs} />
           )}
         </div>
       </div>
