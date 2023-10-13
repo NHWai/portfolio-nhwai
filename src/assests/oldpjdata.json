@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Calculator",
+        "comment": "Project from FrontEnd Mentor",
+        "tech": ["ReAct", "VanillaJs"],
+        "tabname":"React",
+        "imgurl":"https://img-for-portfolio.vercel.app/img/calculator.jpg",
+        "demourl":"https://codepen.io/NHWai/pen/vYdqoyR"
+      },
+      {
+        "name": "Pomodoro Clock",
+        "comment": "Project from FrontEnd Mentor",
+        "tech": ["ReAct", "VanillaJs"],
+        "tabname":"React",
+        "imgurl":"https://img-for-portfolio.vercel.app/img/pomodoroclock.jpg",
+        "demourl":"https://codepen.io/NHWai/pen/NWYjPmz?editors=0011"
+      },
+      {
+        "name": "Drum Machine",
+        "comment": "Project from FrontEnd Mentor",
+        "tech": ["ReAct", "VanillaJs"],
+        "tabname":"React",
+        "imgurl":"https://img-for-portfolio.vercel.app/img/drum.jpg",
+        "demourl":"https://codepen.io/NHWai/pen/vYRJYdz?editors=0110"
+      },
+      {
+        "name": "Tenzies",
+        "comment": "Project from Scrimba",
+        "tech": ["ReAct"],
+        "tabname": "React",
+        "imgurl": "https://img-for-portfolio.vercel.app/img/tenzies-react.png",
+        "codeurl": "https://github.com/NHWai/Tenzies-from-Scrimba",
+        "demourl": "https://tenzies-from-scrimba.vercel.app/"
+      }
+]

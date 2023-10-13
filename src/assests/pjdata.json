@@ -18,45 +18,22 @@
     "demourl": "https://movie-app-six-nu.vercel.app/"
   },
   {
-    "name": "Quizzical App",
-    "comment": "Project from Scrimba",
-    "tech": ["ReAct"],
+    "name": "CV Template App",
+    "comment": "Project from Odin",
+    "tech": ["ReAct","Typescript"],
     "tabname": "React",
-    "imgurl": "https://img-for-portfolio.vercel.app/img/quizzical-react.png",
-    "codeurl": "https://github.com/NHWai/quizzies-app",
-    "demourl": "https://quizzies-app.vercel.app/"
+    "imgurl": "https://img-for-portfolio.vercel.app/img/cv-template-app.jpg",
+    "codeurl": "https://github.com/NHWai/odin-cvform",
+    "demourl": "https://heartfelt-kangaroo-24c0ff.netlify.app/"
   },
   {
-    "name": "Calculator",
-    "comment": "Project from FrontEnd Mentor",
-    "tech": ["ReAct", "VanillaJs"],
-    "tabname":"React",
-    "imgurl":"https://img-for-portfolio.vercel.app/img/calculator.jpg",
-    "demourl":"https://codepen.io/NHWai/pen/vYdqoyR"
-  },
-  {
-    "name": "Pomodoro Clock",
-    "comment": "Project from FrontEnd Mentor",
-    "tech": ["ReAct", "VanillaJs"],
-    "tabname":"React",
-    "imgurl":"https://img-for-portfolio.vercel.app/img/pomodoroclock.jpg",
-    "demourl":"https://codepen.io/NHWai/pen/NWYjPmz?editors=0011"
-  },
-  {
-    "name": "Drum Machine",
-    "comment": "Project from FrontEnd Mentor",
-    "tech": ["ReAct", "VanillaJs"],
-    "tabname":"React",
-    "imgurl":"https://img-for-portfolio.vercel.app/img/drum.jpg",
-    "demourl":"https://codepen.io/NHWai/pen/vYRJYdz?editors=0110"
-  },
-  {
-    "name": "Tenzies",
-    "comment": "Project from Scrimba",
-    "tech": ["ReAct"],
+    "name": "Memory Card",
+    "comment": "Project from Odin",
+    "tech": ["ReAct","Typescript"],
     "tabname": "React",
-    "imgurl": "https://img-for-portfolio.vercel.app/img/tenzies-react.png",
-    "codeurl": "https://github.com/NHWai/Tenzies-from-Scrimba",
-    "demourl": "https://tenzies-from-scrimba.vercel.app/"
+    "imgurl": "https://img-for-portfolio.vercel.app/img/memory-card-game.jpg",
+    "codeurl": "https://github.com/NHWai/odin-memory-card",
+    "demourl": "https://melodic-maamoul-73e068.netlify.app/"
   }
+  
 ]
